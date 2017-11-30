@@ -4,12 +4,12 @@ import {
     Text,
 } from 'react-native';
 
-const Setup = () => {
+const Scoring = () => {
     return (
         <View> 
-            <Text> This is the Setup Page! </Text>
+            <Text> You Win! </Text>
         </View>
     );
 }
 
-export default Setup;
+export default Scoring;

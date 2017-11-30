@@ -1,14 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import Setup from './src/components/screens/Setup';
+import configureStore from './src/store/configureStore';
 
-import Setup from './src/components/scenes/Setup';
+const store = configureStore();
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Setup/>
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <Setup/>
+        </View>
+      </Provider>
     );
   }
 }
