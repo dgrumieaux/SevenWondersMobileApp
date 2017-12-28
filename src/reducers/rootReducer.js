@@ -1,3 +1,4 @@
+import navReducer from './navReducer';
 import { combineReducers } from 'redux';
 import { INCREMENT_COUNT, DECREMENT_COUNT } from '../actions/temp.actions';
 
@@ -10,7 +11,8 @@ const tempCountReducer = (state = 0, action) => {
 }
 
 const rootReducer = combineReducers({
-    count: tempCountReducer
+    count: tempCountReducer,
+    nav: navReducer,
 });
 
 export default rootReducer;

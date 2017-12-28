@@ -6,7 +6,9 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { INCREMENT_COUNT, DECREMENT_COUNT } from '../../actions/temp.actions';
-const Setup = ({increment, decrement, count}) => {
+import { NavigationActions } from 'react-navigation';
+
+const Setup = ({increment, decrement, next, count}) => {
     return (
         <View> 
             <Text> This is the Setup Page! </Text>
@@ -20,6 +22,11 @@ const Setup = ({increment, decrement, count}) => {
                 onPress={decrement}
                 title="Decrement"
                 color="#841584"
+            />   
+            <Button
+                onPress={next}
+                title="Start Game"
+                color="#841584"
             />       
           </View>
     );
@@ -30,4 +37,5 @@ export default connect(
     dispatch => ({ 
         increment: () => dispatch({type: INCREMENT_COUNT}),
         decrement: () => dispatch({type: DECREMENT_COUNT}),
+        next: () => dispatch(NavigationActions.navigate('Scoring')),
     }))(Setup);
