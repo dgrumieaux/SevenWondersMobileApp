@@ -5,9 +5,11 @@ import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 
 import Scoring from '../components/screens/Scoring';
 import Setup from '../components/screens/Setup';
+import PlayerEntry from '../components/screens/PlayerEntry';
 
 export const AppNavigator = StackNavigator({
     Scoring: { screen: Scoring },
+    PlayerEntry: { screen: PlayerEntry },
     Setup: { screen: Setup },
 });
 
