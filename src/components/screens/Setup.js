@@ -37,5 +37,5 @@ export default connect(
     dispatch => ({ 
         increment: () => dispatch({type: INCREMENT_COUNT}),
         decrement: () => dispatch({type: DECREMENT_COUNT}),
-        next: () => dispatch(NavigationActions.navigate('Scoring')),
+        next: () => dispatch(NavigationActions.navigate({routeName:'Scoring'})),
     }))(Setup);
